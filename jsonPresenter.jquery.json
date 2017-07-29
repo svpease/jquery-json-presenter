@@ -1,0 +1,28 @@
+{
+	"name": "validation",
+	"title": "jQuery JSON Presenter",
+	"description": "Troubleshooting JSON made easy. Neatly present JSON on a page with easily expandable and collapsible JSON properties through the user interface as well as through configuration.",
+	"keywords": [
+		"json",
+		"debug",
+		"troubleshoot"
+	],
+	"author": {
+		"name": "Steven Pease",
+		"email": "stevenvpease@gmail.com",
+		"url": "https://www.linkedin.com/in/stevenpease"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/MIT"
+		}
+	],
+	"bugs": "https://github.com/svpease/jquery-json-presenter/issues",
+	"homepage": "https://github.com/svpease/jquery-json-presenter",
+	"docs": "https://github.com/svpease/jquery-json-presenter/documentation/",
+	"download": "https://github.com/svpease/jquery-json-presenter/releases",
+	"dependencies": {
+		"jquery": ">=1.4.4"
+	}
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery JSON Presenter Plugin - Basic Demo</title>
+	<script src="../lib/jquery.js"></script>
+	<script src="../src/jquery.jsonPresenter.js"></script>
+	<link rel="stylesheet" href="../src/jquery.jsonPresenter.css" />
+	<link rel="stylesheet" href="./index.css" />
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="demo-container">
+		<h1>jQuery JSON Presenter Plugin</h1>
+		<h2>Basic Demo</h2>
+
+		<h3>Input</h3>
+		<p>Place valid JSON below:</p>
+		<textarea id="json-input">{"hi":"there","list":["x","y",true,"z", 4, 8, 15, 16, 23, 42],"associativeArray":{"a":4,"c":8,"e11":17,"anotherArray":[{"somethingElse":{"hi":"there"}},3,5,8]}}</textarea>
+		<button id="execute">Demo Plugin</button>
+
+		<p class="error hidden">There was a problem with the provided JSON. Please check that the JSON is valid.</p>
+		<div id="output-container" class="hidden">
+			<h3>Output</h3>
+			<div id="json-container"></div>
+			<div class="demo-options">
+				<button id="expand-all">Expand All</button>
+				<button id="collapse-all">Collapse All</button>
+				<button id="expand-levels">Expand Levels</button>
+				Levels: <input type="text" id="levels" value="1" />
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function() {
+			var jsonContainer = $('#json-container');
+
+			$('#execute').on('click', function() {
+				var error = false;
+				try {
+					var json = JSON.parse($('#json-input').val());
+				}
+				catch (e) {
+					error = true;
+				}
+
+				$('.error').toggleClass('hidden', !error);
+				$('#output-container').toggleClass('hidden', error);
+
+				jsonContainer
+				.jsonPresenter('destroy') // Clear any previous JSON being presented through this plugin for this container
+				.jsonPresenter({ // Use the jquery.jsonPresenter plugin using the input from the textarea above
+						json: json
+				})
+				.jsonPresenter('expand', 0); // Expand all JSON properties so that none of them are collapsed
+			});
+
+			$('#expand-all').on('click', function() {
+				jsonContainer.jsonPresenter('expandAll');
+			});
+
+			$('#collapse-all').on('click', function() {
+				jsonContainer.jsonPresenter('collapseAll');
+			});
+
+			$('#expand-levels').on('click', function() {
+				var levels = parseInt($('#levels').val());
+				jsonContainer.jsonPresenter('expand', levels);
+			});
+		});
+	</script>
+</body>
+</html>

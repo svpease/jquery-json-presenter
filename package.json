@@ -1,0 +1,59 @@
+{
+	"name": "jquery-json-presenter",
+	"title": "jQuery JSON Presenter Plugin",
+	"description": "Troubleshooting JSON made easy",
+	"version": "1.16.1-pre",
+	"homepage": "https://github.com/svpease/jquery-json-presenter",
+	"license": "MIT",
+	"author": {
+		"name": "Steven Pease",
+		"email": "stevenvpease@gmail.com",
+		"url": "https://www.linkedin.com/in/stevenpease"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/svpease/jquery-json-presenter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/svpease/jquery-json-presenter/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://www.opensource.org/licenses/MIT"
+		}
+	],
+	"scripts": {
+		"test": "grunt",
+		"prepublish": "grunt"
+	},
+	"files": [
+		"dist/jquery.jsonPresenter.js",
+		"dist/jquery.jsonPresenter.min.js"
+	],
+	"main": "dist/jquery.jsonPresenter.js",
+	"dependencies": {
+		"jquery": "^1.7 || ^2.0 || ^3.1"
+	},
+	"devDependencies": {
+		"commitplease": "2.3.1",
+		"grunt": "1.0.1",
+		"grunt-contrib-compress": "1.2.0",
+		"grunt-contrib-concat": "1.0.1",
+		"grunt-contrib-copy": "1.0.0",
+		"grunt-contrib-jshint": "1.0.0",
+		"grunt-contrib-qunit": "1.2.0",
+		"grunt-contrib-uglify": "1.0.1",
+		"grunt-contrib-watch": "1.0.0",
+		"grunt-jscs": "2.8.0",
+		"grunt-text-replace": "0.4.0",
+		"qunitjs": "2.0.0"
+	},
+	"keywords": [
+		"jquery",
+		"jquery-plugin",
+		"json",
+		"debug",
+		"troubleshoot"
+	]
+}

@@ -1,0 +1,51 @@
+body {
+	font: 16px Helvetica,Arial;
+	margin: 0;
+}
+
+#demo-container {
+	width: 700px;
+	margin: 0 auto;
+	background: #ddd;
+	padding: 20px;
+}
+
+#json-input {
+	width: 100%;
+	height: 200px;
+	font-size: 1.6em;
+}
+
+button {
+	font-size: 1.5em;
+	cursor: pointer;
+	padding: 0.4em;
+}
+
+button:hover {
+	color: blue;
+}
+
+.error {
+	font-weight: bold;
+	font-style: italic;
+	color: red;
+}
+
+.hidden {
+	display: none;
+}
+
+.demo-options {
+	padding-top: 1.6em;
+}
+
+.demo-options button,
+.demo-options input {
+	font-size: 1.2em;
+}
+
+.demo-options input {
+	width: 2em;
+	text-align: center;
+}
